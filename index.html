@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #777676;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 25% 25%,
+                    #ffffff 0%,
+                    #f0f0f0 15%,
+                    #d8d8d8 30%,
+                    #b0b0b0 45%,
+                    #808080 60%,
+                    #555555 75%,
+                    #2a2a2a 90%);
+            margin-bottom: 20px;
+            margin-left: -80px;
+        }
+
+        .circle::before {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 50px;
+            left: 50px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 50%, transparent 80%);
+            border-radius: 50%;
+        }
+
+        .bottom_shadow {
+            position: absolute;
+            width: 280px;
+            height: 120px;
+            left: 50%;
+            top: calc(50% + 33px);
+            background: radial-gradient(ellipse,
+                    rgba(0, 0, 0, 0.35) 0%,
+                    rgba(0, 0, 0, 0.25) 30%,
+                    rgba(0, 0, 0, 0.15) 50%,
+                    rgba(0, 0, 0, 0.08) 70%,
+                    transparent 85%);
+            border-radius: 50%;
+            transform: skewX(-5deg) scaleY(0.6);
+            filter: blur(3px);
+        }
+    </style>
+</head>
+<div class="circle"></div>
+<div class="bottom_shadow"></div>
+<body>
+
+</body>
+
+</html>
